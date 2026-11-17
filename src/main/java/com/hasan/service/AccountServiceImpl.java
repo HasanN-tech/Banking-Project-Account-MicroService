@@ -64,7 +64,7 @@ public class AccountServiceImpl implements AccountService {
 	public Account getAccount(Long accountId) {
 
 		return accountRepository.findById(accountId)
-				.orElseThrow(() -> new ResourceNotFoundException("Account Not Found"));
+				.orElseThrow(() -> new ResourceNotFoundException("Account Not Found With Id: "+accountId));
 	}
 
 	// Get all accounts
