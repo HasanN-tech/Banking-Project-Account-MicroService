@@ -13,6 +13,6 @@ public class AccountNumberGenerator {
 		Random num=new Random();
 		num.longs(1000000000);
 
-		return "RJF" + value;
+		return "SBI" + value;
 	}
 }
