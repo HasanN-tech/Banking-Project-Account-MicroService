@@ -162,7 +162,7 @@ public class AccountServiceImpl implements AccountService {
 	public AccountValidationResponse validateAccount(String accountNumber) {
 
 		Account account = accountRepository.findByAccountNumber(accountNumber)
-				.orElseThrow(() -> new ResourceNotFoundException("Account Not Found"));
+				.orElseThrow(() -> new ResourceNotFoundException("Invalid Account Number"));
 
 		return AccountValidationResponse.builder().valid("ACTIVE".equals(account.getAccountStatus()))
 				.accountStatus(account.getAccountStatus()).build();
@@ -174,7 +174,7 @@ public class AccountServiceImpl implements AccountService {
 	public BigDecimal getBalance(String accountNumber) {
 
 		Account account = accountRepository.findByAccountNumber(accountNumber)
-				.orElseThrow(() -> new ResourceNotFoundException("Account Not Found"));
+				.orElseThrow(() -> new ResourceNotFoundException("Account Not Found with account number: "+accountNumber));
 
 		return account.getBalance();
 	}
@@ -211,7 +211,7 @@ public class AccountServiceImpl implements AccountService {
 			account.setBalance(account.getBalance().add(amount));
 
 		} else {
-			throw new IllegalArgumentException("Invalid operation");
+			throw new IllegalArgumentException("Invalid operation, Please select a correct Operation");
 		}
 
 		account.setUpdatedAt(LocalDateTime.now());
