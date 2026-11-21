@@ -1,5 +1,4 @@
 # Account Service – Banking Management Platform
-
 ## 📌 Project Overview
 Account Service is a microservice developed as part of an **Enterprise Banking Management Platform** using Spring Boot and Microservices Architecture.
 It is responsible for managing customer bank accounts, including account creation, account details retrieval, balance enquiry, account updates, account status management, and other account-related operations.
