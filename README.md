@@ -1,5 +1,5 @@
 # Account Service – Banking Management Platform
-## 📌 Project Overview
+## 📌 Service Overview
 Account Service is a microservice developed as part of an **Enterprise Banking Management Platform** using Spring Boot and Microservices Architecture.
 It is responsible for managing customer bank accounts, including account creation, account details retrieval, balance enquiry, account updates, account status management, and other account-related operations.
 The service follows a layered architecture using Spring Boot, Spring Data JPA, Hibernate, MySQL, RESTful APIs, DTOs, validation, and centralized exception handling.
@@ -77,7 +77,7 @@ Before running the application, ensure the following are installed:
 
 ## ▶️ How to Run the Project
 ### Step 1: Clone the Repository
-git clone YOUR_GITHUB_REPOSITORY_URL
+[git clone YOUR_GITHUB_REPOSITORY_URL](https://github.com/HasanN-tech/Banking-Project-Account-MicroService)
 
 ### Step 2: Navigate to the Project Directory
 cd Account-Service
